@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3D</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box{
+			width: 200px;
+			height: 200px;
+			position: relative;
+			margin: 300px auto;
+			transform-style: preserve-3d;
+			transform:rotate(13deg);
+			animation: move 3s linear infinite alternate;
+
+		}
+
+		#minbox{
+			width: 100px;
+			width: 100px;
+			position: absolute;
+			left: 50px;
+			top: 50px;
+			border: 1px solid:2px;
+			transform-style: preserve-3d;
+			transform-origin: 50px 50px 0;
+		}
+		.front,.down,.up,.back,.left,.right{
+			position: absolute;
+			height: 100px;
+			width: 100px;
+		}
+		.front{
+			transform: translateZ(50px);
+			background: rgba(144,83,79,0.8);
+       }
+       .back{
+       	transform:translateZ(-50px);
+       	background: rgba(0,118,143,0.8);
+       }
+       .up{
+       	transform:rotateX(90deg) translateZ(50PX);
+       	background: rgba(159,190,212,0.8);
+       }
+       .down{
+       	transform: rotateX(-90deg) translateZ(50PX);
+       	background: rgba(0,118,143,0.8);
+       }
+       .left{
+       	transform: rotateY(-90deg) translateZ(50px);
+       	background: rgba(114,118,143,0.8);
+       }
+       .right{
+       	transform:  rotateY(90deg) translateZ(50px);
+       	background: rgba(75,53,56,0.8);
+       }
+       #maxbox{
+       	width: 200px;
+       	height: 200px;
+       	transform-origin: 100px 100px 0;
+       	transform-style: preserve-3d;
+       	left: 0;
+       	top: 0;
+       }
+       .front1,.back1,.up1,.down1,.left1,.right1{
+       	width: 200px;
+       	height: 200px;
+       	position: absolute;
+
+       }
+       .front1{
+       	transform: translateZ(100px);
+       	 	background: rgba(159,190,212,0.8);
+       }
+       .back1{
+       	transform: translateZ(-100px);
+       	 		background: rgba(0,118,143,0.8);
+        }
+       .down1{
+       	transform: rotateX(-90deg) translateZ(100px);
+       	 		background: rgba(250,196,87,0.8);
+
+       }
+       .up1{
+       	transform: rotateX(90deg) translateZ(100px);
+       	 		background: rgba(255,79,73,0.8);
+
+       }
+       .left1{
+       	transform: rotateY(90deg) translateZ(100px);
+       	 		background: rgba(75,53,56,0.8);
+
+       }
+       .right1{
+       	transform: rotateY(-90deg) translateZ(100px);
+       	 		background: rgba(250,196,87,0.8);
+       }
+      @keyframes move{
+      	16%{
+					-webkit-transform:rotateY(-90deg)}
+				33%{
+					-webkit-transform:rotateY(-90deg)rotateZ(135deg)}
+				50%{
+					-webkit-transform:rotateY(225deg)rotateZ(135deg)}
+				66%{
+					-webkit-transform:rotateY(135deg)rotateX(135deg)}
+				100%{
+					-webkit-transform:rotateX(135deg)}
+
+				}
+      
+
+	</style>
+</head>
+<body>
+<div id="box">
+	<div id="minbox">
+		<div class="front"></div>
+		<div class="back"></div>
+		<div class="down"></div>
+		<div class="up"></div>
+		<div class="left"></div>
+		<div class="right"></div>
+	</div>
+	<div id="maxbox">
+		<div class="front1"></div>
+		<div class="back1"></div>
+		<div class="down1"></div>
+		<div class="up1"></div>
+		<div class="left1"></div>
+		<div class="right1"></div>
+	</div>
+</div>
+</body>
+</html>

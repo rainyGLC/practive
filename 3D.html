@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3D</title>
+	<style type="text/css">
+		#container{
+			width: 198px;
+			height: 198px;
+			margin: 200px auto 0;
+		}
+		.front,.down,.up,.back,.left,.right{
+			position: absolute;
+			height: 198px;
+			width: 198px;
+
+		}
+		#box{
+			transform-style: preserve-3d;
+			transform-origin: 99px 99px 0;
+			/*perspective: 400px;*/
+			animation: movingbox 8s ease-in-out infinite alternate;
+		}
+		.front{
+             transform: translateZ(99px);
+		     background: rgba(159,190,212,0.8);
+		}
+		.hr1,.hr2,.vr1,.vr2{
+			position: absolute;
+			background: #FFF;
+		}
+		.hr1{
+			width: 198px;
+			height:3px;
+			left: 0px;
+			top:65px;
+		}
+		.hr2{
+			width: 198px;
+			height: 3px;
+			left: 0;
+			top:129px;
+		}
+		.vr1{
+			width: 3px;
+			height: 198px;
+			left: 65px;
+			top: 0;
+		}
+		.vr2{
+			width: 3px;
+			height: 198px;
+			left: 129px;
+			top: 0;
+		}
+
+		.down{
+			transform:rotateX(-90deg) translateZ(99px);
+			background: rgba(0,118,143,0.8);
+		}
+		.up{
+			transform: rotateX(90deg)translateZ(99px);
+			background: rgba(114,83,79,0.8);
+		}
+		.back{
+			transform: translateZ(-99px);
+			background: rgba(250,196,87,0.8);
+		}
+		.left{
+			transform: rotateY(-90deg)translateZ(99px);
+			background: rgba(255,79,73,0.8);
+			}
+			.right{
+				transform: rotateY(90deg)translateZ(99px);
+				background: rgba(75,53,56,0.8);
+			}
+			@keyframes movingbox{
+				16%{
+					-webkit-transform:rotateY(-90deg)}
+				33%{
+					-webkit-transform:rotateY(-90deg)rotateZ(135deg)}
+				50%{
+					-webkit-transform:rotateY(225deg)rotateZ(135deg)}
+				66%{
+					-webkit-transform:rotateY(135deg)rotateX(135deg)}
+				100%{
+					-webkit-transform:rotateX(135deg)}
+
+				}
+
+	</style>
+
+
+
+</head>
+<body>
+	<div id="container">
+		<div id="box">
+	<div class="front">
+		<div class="hr1"></div>
+		<div class="hr2"></div>
+		<div class="vr1"></div>
+		<div class="vr2"></div>
+	</div>
+	<div class="down">
+		<div class="hr1"></div>
+		<div class="hr2"></div>
+		<div class="vr1"></div>
+		<div class="vr2"></div>
+	</div>
+	<div class="up">
+		<div class="hr1"></div>
+		<div class="hr2"></div>
+		<div class="vr1"></div>
+		<div class="vr2"></div>
+	</div>
+	<div class="back">
+		<div class="hr1"></div>
+		<div class="hr2"></div>
+		<div class="vr1"></div>
+		<div class="vr2"></div>
+	</div>
+	<div class="left">
+		<div class="hr1"></div>
+		<div class="hr2"></div>
+		<div class="vr1"></div>
+		<div class="vr2"></div>
+	</div>
+	<div class="right">
+		<div class="hr1"></div>
+		<div class="hr2"></div>
+		<div class="vr1"></div>
+		<div class="vr2"></div>
+	</div>
+</div>
+</div>
+</body>
+</html>

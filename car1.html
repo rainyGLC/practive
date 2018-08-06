@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>car</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#container{
+			width: 100%;/*%显示屏的宽度*/
+			height: 600px;
+			position: relative;
+
+		}
+		#car{
+			width: 400px;
+			height:210px;
+			position: absolute;
+			left: 50px;
+			top:390px;
+		animation: caryi 8s ease-in-out infinite;	
+		}
+		.head{
+		width: 400px;
+       	height: 100px;
+       	position: absolute;
+       	background: #152c5e;
+       	border-top-left-radius:72px 60px;
+       	border-top-right-radius:72px 60px;
+
+       }
+		.chassis{
+			position: absolute;
+			width: 400px;
+			height: 130px;
+			background: #152c5e;
+			border:2px solid:#000000;
+
+		}
+		.tire{
+			position: absolute;
+			width: 120px;
+			height: 120px;
+			bottom: 0;
+			border-radius: 60px;
+			background: #0099FF;
+			border: 2px solid:#000000;
+			animation: tireyi 6s ease-in-out infinite;
+
+		}
+		#tire-left{
+			left: 20px;
+		}
+		#tire-right{
+			right: 20px;
+		}
+		.hr,.vr{
+			position: absolute;
+			background: #152c5e
+		}
+		.hr{
+			height:1px;
+			width: 100%;
+			left:0;
+			top: 60px;
+		}
+		.vr{
+			width: 1px;
+			height: 100%;
+			left:60px;
+			top :0;
+		}
+		.ground{
+			position: absolute;
+			width: 100%;
+			height:130px;
+			background: #ABC828;
+		}
+		@keyframes caryi{
+			0%{
+				left: -100px;				
+			}
+			100%{
+				left: 1600px;
+			}
+		}
+
+		@keyframes tireyi{
+			0%{
+				transform:rotate(0);
+			}
+			100%{
+				transform: rotate(900deg);
+			}
+		}
+
+
+	</style>
+
+</head>
+<body>
+	<div id="container">
+		<div id="car">
+			<div class="head"></div>
+			<div class="chassis"></div>
+			<div id="tire-left" class="tire">
+				<div class="hr"></div>
+				<div class="vr"></div>
+			</div>
+			<div id="tire-right" class="tire">
+				<div class="hr"></div>
+				<div class="vr"></div>
+			</div>
+		</div>
+	</div>
+	<div class="ground"></div>
+
+</body>
+</html>
